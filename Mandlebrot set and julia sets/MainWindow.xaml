@@ -1,0 +1,41 @@
+﻿<Window x:Class="NicholasHeerdtHW4.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:NicholasHeerdtHW4"
+        mc:Ignorable="d"
+        Title="Julia sets, Mandlebrot sets, and zoom" Height="1000" Width="1200"
+        Left="0" Top="0">
+    <Grid>
+        <StackPanel Orientation="Vertical"
+Margin="40,5,1014,0">
+            <Button Name="btnStart1" Click="btnStart_Click1" Width="50" Content="Set 1"/>
+            <Button Name="btnStart2" Click="btnStart_Click2" Width="50" Content="Set 2"/>
+            <Button Name="btnStart3" Click="btnStart_Click3" Width="50" Content="Set 3"/>
+            <Button Name="btnStart4" Click="btnStart_Click4" Width="50" Content="Set 4"/>
+            <Button Name="btnStart5" Click="btnStart_Click5" Width="50" Content="Set 5"/>
+            <Button Name="btnStart6" Click="btnStart_Click6" Width="50" Content="Set 6"/>
+            <Button Name="btnStart7" Click="btnStart_Click7" Width="50" Content="Set 7"/>
+            <Button Name="btnStart8" Click="btnStart_Click8" Width="50" Content="Set 8"/>
+
+            <Label HorizontalAlignment="Center">_Iterations</Label>
+            <TextBox Name="TextBox1" PreviewTextInput ="TextBoxInput1" Height="30" Width="105" RenderTransformOrigin="0.672,-8.595" Text="100" TextChanged="Textbox1Changed"/>
+
+            <Label HorizontalAlignment="Center">_Custom Input a</Label>
+            <TextBox Name="TextBox2"  PreviewTextInput ="TextBoxInput2" Height="30" Width="105" RenderTransformOrigin="0.672,-8.595" Text="0"/>
+            <Label HorizontalAlignment="Center">_Custom Input b</Label>
+            <TextBox Name="TextBox3"  PreviewTextInput ="TextBoxInput3" Height="30" Width="105" RenderTransformOrigin="0.672,-8.595" Text="0"/>
+
+            <Button Name="btnStart9" Click="btnStart_Click9" Width="78" Content="Custom input set"/>
+            <Button Name="btnStart10_Copy" Click="btnStart_Click10" Width="96" Content="Mandelbrot set"/>
+            <Button Name="btnStart11_Copy" Click="btnStart_Click11" Width="96" Content="Re-render"/>
+        </StackPanel>
+
+        <Canvas Name = "myCanvas" Margin="260,25,46,25" Width="900" Height="900">
+            <Image x:Name="myImage" MouseDown="ImageMouseDown" MouseUp="ImageMouseUp" MouseMove="myImage_MouseMove"/>
+        </Canvas>
+    </Grid>
+
+
+</Window>
